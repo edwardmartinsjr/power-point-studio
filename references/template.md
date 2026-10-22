@@ -660,6 +660,106 @@ Before release, the agent designer must be able to answer **yes** to all of the 
 - Does the deck remain understandable when exported to PDF?
 - Can another agent edit the file without rebuilding the visual system?
 
+
+## Image-led executive composition system
+
+Use this system when a slide needs the visual depth of a strong hero image while retaining the precision and editability of enterprise PowerPoint objects.
+
+### Composition model
+- Divide the slide into a structured content field and a dominant visual field using the 12-column grid.
+- A practical executive-summary split is **6–7 columns for narrative and evidence** and **5–6 columns for the hero visual**.
+- Let the image reach a slide edge when scale is useful, but keep essential image detail outside the footer and title safe areas.
+- Blend the image into the canvas with a dark solid overlay, directional gradient, or controlled transparency. The treatment must improve contrast and hierarchy, not create decoration.
+- Use one strong focal point. The focal point should support the slide message and sit away from the primary text block.
+- Keep title, framing statement, capability cards, and decision text as native editable objects.
+
+### Generated-image art direction
+For conceptual enterprise visuals, prompts should specify:
+- the business or technical subject;
+- the scene structure and relationship of components;
+- the intended slide placement, such as right-weighted, centered, or full-bleed;
+- the desired visual language, such as premium enterprise technology, photorealistic, line-art, or 3D-infographic hybrid;
+- the graphite, cool-gray, white, signal-green, and optional cyan palette;
+- high contrast and presentation-distance legibility;
+- no embedded text, numbers, product marks, or logos unless the visual is explicitly an infographic;
+- no empty space when the asset will be cropped into a fixed visual field.
+
+Generated imagery must not be treated as evidence. Keep factual labels and claims outside the image and source the claims independently.
+
+### Image quality and placement
+- Use the highest-resolution available asset and verify sharpness at the final placed size.
+- Crop, do not stretch. Preserve aspect ratio.
+- Avoid placing the focal subject under opaque cards or across the slide fold between narrative and visual fields.
+- Use a minimum-opacity treatment sufficient to protect text contrast; increase opacity locally when the background is busy.
+- Apply no more than one principal image effect per visual field, such as a dark overlay, gradient fade, or restrained frame.
+- Do not add heavy glow, bevel, reflection, or ornamental shadow to photography or generated imagery.
+
+### Vector and native-object layering
+Use the following z-order as the default construction stack:
+1. Canvas or master background.
+2. Hero image or supporting imagery.
+3. Image contrast treatment or mask.
+4. Connector network or large vector framework.
+5. Structural panels, cards, bands, and dividers.
+6. Icons, chart marks, and data objects.
+7. Editable headings, labels, values, and annotations.
+8. Decision request, source line, classification, and footer.
+
+Do not flatten editable labels into images. Do not place connectors above text. Use a single SVG connector network when many paths belong to one system.
+
+### Object naming and grouping convention
+Name significant objects consistently so another agent or designer can understand the construction:
+- `BG_Canvas`
+- `Hero_Image_01`
+- `Hero_Overlay`
+- `Vector_Network`
+- `Hub_Core`
+- `Pillar_01_[Name]` through `Pillar_05_[Name]`
+- `Card_[Purpose]_[Number]`
+- `Chart_[Type]_[Subject]`
+- `Decision_Bar`
+- `Source_Note`
+- `Footer_Group`
+
+Group objects by function, not merely by proximity. Keep text editable inside a group only when the entire component is intended to move as one unit.
+
+### Precision rules for peer objects
+- Equal peer cards must have identical width, height, corner radius, border weight, internal padding, heading baseline, and description origin.
+- Use a shared horizontal or vertical distribution value rather than visual estimation.
+- Keep at least **0.20 in** visible separation between unrelated blocks.
+- Use **0.15–0.25 in** internal card padding for standard executive cards.
+- Use **0.75–1.25 pt** borders for standard cards and **1.25–2 pt** for the selected or primary card.
+- Keep shadows off by default. If needed, use one low-opacity shadow system consistently.
+
+### Visual equation component
+For transformation or operating-model slides, a concise visual equation may clarify the argument:
+- muted input or baseline capability;
+- bright, bold enabling context;
+- operational guardrails or control layer;
+- emphasized outcome in signal green.
+
+Set the equation inside one calm surface with a short eyebrow label. Keep operators visually secondary and make the outcome the strongest phrase. Use this component only when the relationship is causal or additive and supported by the content.
+
+### Executive decision component
+- Separate the decision request from supporting evidence using placement, border, scale, or a dedicated decision bar.
+- Use a short uppercase label such as `EXECUTIVE DECISION`, `RECOMMENDATION`, or `NEXT STEP`.
+- Write the requested action as one sentence beginning with an active verb.
+- Use signal green as a border, short rule, or label accent rather than a large filled panel.
+- Position the decision late in the reading path, usually the lower-right or bottom band, without entering the footer zone.
+
+### Visual acceptance test
+A slide using images, vectors, and native objects passes only when:
+- the message is understandable before reading body detail;
+- the image has a clear narrative function and a deliberate crop;
+- vector paths explain relationships rather than decorate the canvas;
+- editable text remains separate from raster artwork;
+- the z-order is stable and connectors remain behind nodes;
+- peer components align precisely to the grid;
+- body text remains readable at presentation distance;
+- the decision or takeaway is unmistakable;
+- no visual layer competes with the title or obscures sources;
+- the slide remains coherent when exported to PDF.
+
 ## Generic design brief for creating a new presentation
 
 When handing this system to a agent, use the following brief:
