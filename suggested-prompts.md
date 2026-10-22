@@ -7,7 +7,7 @@ Slide Structure:
 The goal of this project is to transition our data team into a highly efficient, mature operation by developing a data-specific AI harness. As outlined in Xavier Gumara Rigol's framework, traditional AI improvements come not from buying more expensive models, but from the surrounding context layer—the harness.
 By engineering a robust harness, we will address data-specific complexities—such as state, environments, metadata, and quality—enabling specialized AI agents to automate data workflows safely and accurately.
 
-Follow design skill and template [template.md]
+Follow design skill and template [template.md] as design reference and knowledge base as quality reference as well
 
 ## Create an Executive Deck
 

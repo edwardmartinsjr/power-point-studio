@@ -27,18 +27,16 @@ This repository contains the agent's build inputs and supporting guidance, rathe
 
 ## Using the Skill
 
-Use the skill when asking the Copilot agent to create a deck, turn source material into slides, review an existing presentation, or recommend visuals. Start with a prompt from [`suggested-prompts.md`](suggested-prompts.md), or describe the task in your own words and provide the relevant source files.
+This package is prepared for Microsoft 365 Copilot custom skills.
 
-Include these details when they matter:
+## Contents
+- `SKILL.md`: required skill metadata and instructions
+- `references/template.md`: design-system reference loaded when needed
 
-- Audience and presentation objective
-- Desired decision, action, or outcome
-- Delivery context, such as a live meeting, workshop, or pre-read
-- Requested slide count and deadline
-- Brand requirements, including an existing PowerPoint template, logo, fonts, colors, and confidentiality marking
-- Source material, datasets, and required citations
+## Upload
+Upload `enterprise-powerpoint-designer.zip` in Microsoft 365 Copilot Agent Builder under the agent's Skills configuration.
 
-If important details are missing, the agent should clarify when they materially affect the result or proceed with explicit assumptions. It must not invent facts, metrics, dates, owners, or conclusions.
+The package contains no executable scripts. Presentation creation depends on the capabilities and tools available to the host agent.
 
 ## Presentation Defaults
 
